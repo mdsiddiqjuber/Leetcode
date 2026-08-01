@@ -26,8 +26,7 @@ class Solution {
         int l = Math.max(dfs(node.left), 0);
         int r = Math.max(dfs(node.right), 0);
         int temp = Math.max(node.val, Math.max(l, r) + node.val);
-        int ans = Math.max(temp, l + r + node.val);
-        res = Math.max(res, ans);
+        res = Math.max(res, l + r + node.val);
         return temp;
     }
 }
